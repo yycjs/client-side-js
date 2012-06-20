@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Frontend JavaScript</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="theme/js/slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Frontend JavaScript</h1></header>
+            
+            
+            <section><h2 class="frontpage">David Luecke</h2>
+
+<p><span class="frontpage">GitHub:</span>
+<a class="frontpage" href="http://daffl.github.com">daffl.github.com</a></p>
+<p><span class="frontpage">Twitter:</span>
+<a class="frontpage" href="http://twitter.com/daffl">@daffl</a></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>JavaScript in the browser</h1></header>
+            
+            
+            <section><p><img alt="Overview" src="images/overview.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>JavaScript libraries</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Purpose</h2></header>
+            
+            
+            <section><h2>Make using the language and manipulating the DOM easier</h2>
+<h2>And/or provide client side UI controls</h2>
+<ul>
+<li><a href="http://www.prototypejs.org/">Prototype</a> - Part of the AJAX support for Ruby on Rails</li>
+<li><a href="http://mootools.net/">Mootools</a> - Lighweight OO framework for JavaScript</li>
+<li><a href="http://developer.yahoo.com/yui/">YUI</a> - JavaScript and CSS framework wit UI controls and build tools</li>
+<li><a href="http://dojotoolkit.org/">Dojo Toolkit</a> - Toolkit for rapid JavaScript application development,
+    packaging and widget system (Dijit)</li>
+<li><a href="http://www.sencha.com/products/extjs/">ExtJS</a> - UI heavy framework for rich internet applications</li>
+<li><a href="http://jquery.com/">jQuery</a> - Library to simplify DOM interaction, effects and AJAX interaction</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>ExtJS</h2></header>
+            
+            
+            <section><ul>
+<li>Originally an add-on library extension of YUI</li>
+<li>Optional interoperability with Prototype and jQuery</li>
+<li>Big selection of pre packaged UI controls<ul>
+<li>Grids, Charts, Tabs, Trees</li>
+<li>Window manager</li>
+<li>Form elements, combobox</li>
+</ul>
+</li>
+<li>GPL for open source projects (commercial otherwise)</li>
+<li>MVC parts in version 4.0</li>
+<li>~ 500Kb</li>
+<li><a href="http://dev.sencha.com/deploy/ext-4.1.0-gpl/examples/desktop/desktop.html">Web Desktop demo</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>jQuery</h2></header>
+            
+            
+            <section><ul>
+<li>Simplifies DOM manipulation and traversal and event handling</li>
+<li>AJAX support</li>
+<li>Effects</li>
+<li>UI elements with <a href="http://jqueryui.com">jQuery UI</a> (~200Kb)</li>
+<li>Eliminates cross browser differences</li>
+<li>Plugin mechanism</li>
+<li>Fully open source (MIT licensed)</li>
+<li>~ 32Kb</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>jQuery - Example</h2></header>
+            
+            
+            <section><p><strong>jQuery</strong></p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[name=&quot;your-name&quot;]&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#mydiv&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+
+<p><strong>Markup</strong></p>
+<div class="highlight"><pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;your-name&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;button&gt;</span>Say Hi<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;mydiv&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Application Organization</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>Scope in JavaScript</h2></header>
+            
+            
+            <section><p><strong>JavaScript only knows function scope</strong></p>
+<div class="highlight"><pre><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;testing&#39;</span><span class="p">;</span>
+
+    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+    <span class="p">})(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>Global variables</strong></p>
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">local</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+    <span class="nx">global</span> <span class="o">=</span> <span class="s1">&#39;global&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test</span><span class="p">();</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>Namespacing</h2></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">init</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="cm">/* ... */</span>
+    <span class="p">},</span>
+    <span class="nx">Dummy</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="nx">sayHi</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">App</span><span class="p">.</span><span class="nx">Blog</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">getPosts</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">App</span><span class="p">.</span><span class="nx">Dummy</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="s1">&#39;David&#39;</span><span class="p">));</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>Modules</h2></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">APP</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Do stuff</span>
+    <span class="kd">var</span> <span class="nx">privateVariable</span> <span class="o">=</span> <span class="s1">&#39;Hello &#39;</span><span class="p">,</span>
+        <span class="nx">sayHi</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">privateVariable</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">};</span>
+    <span class="c1">// Return API</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">init</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">},</span>
+        <span class="nx">hi</span> <span class="o">:</span> <span class="nx">sayHi</span>
+    <span class="p">}</span>
+<span class="p">})();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">APP</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="s1">&#39;David&#39;</span><span class="p">));</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>A jQuery plugin</h2></header>
+            
+            
+            <section><div class="highlight"><pre><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">myPlugin</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+            <span class="nx">span</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;span&gt;&#39;</span><span class="p">),</span>
+            <span class="nx">button</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;button&gt;Say Hi&lt;/button&gt;&#39;</span><span class="p">);</span>
+
+        <span class="nx">button</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+        <span class="p">});</span>
+
+        <span class="nx">self</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">span</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">button</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+
+<span class="c1">// &lt;div id=&quot;mydiv&quot;&gt;&lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#mydiv&#39;</span><span class="p">).</span><span class="nx">myPlugin</span><span class="p">(</span><span class="s1">&#39;David&#39;</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2><strong>A</strong>synchronous <strong>m</strong>odule <strong>d</strong>efinition</h2></header>
+            
+            
+            <section><p><strong>AMD</strong>: <a href="http://www.commonjs.org/">CommonJS</a> specification for
+<a href="https://github.com/amdjs/amdjs-api/wiki/AMD">asynchronously loading dependencies</a>.</p>
+<div class="highlight"><pre><span class="c1">// say_hi.js</span>
+<span class="nx">define</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">privateVariable</span> <span class="o">=</span> <span class="s1">&#39;Hello &#39;</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">sayHi</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">privateVariable</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// module.js</span>
+<span class="nx">define</span><span class="p">([</span><span class="s1">&#39;say_hi.js&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">hisayer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">result</span> <span class="o">:</span> <span class="nx">hisayer</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="s1">&#39;David&#39;</span><span class="p">),</span>
+        <span class="nx">sayHi</span> <span class="o">:</span> <span class="nx">hisayer</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// app.js</span>
+<span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;module.js&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">module</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">module</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">(</span><span class="s1">&#39;You&#39;</span><span class="p">);</span> <span class="c1">// Hello You</span>
+    <span class="nx">module</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span> <span class="c1">// -&gt; Hello David</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Environments</h2></header>
+            
+            
+            <section><p><strong>Development</strong>:</p>
+<ul>
+<li>Functionality split into files</li>
+<li>Unmodified source code available for debugging</li>
+</ul>
+<p><strong>Production</strong>:</p>
+<ul>
+<li>Minimize HTTP requests</li>
+<li>Leverage caching</li>
+<li>Minimize file size</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Tools</h2></header>
+            
+            
+            <section><ul>
+<li><a href="http://www.crockford.com/javascript/jsmin.html">JSMin</a> - JavaScript minifier by
+<a href="http://www.crockford.com/">Douglas Crockford</a></li>
+<li><a href="http://developer.yahoo.com/yui/compressor/">YUI compressor</a> - CSS and JavaScript minifier</li>
+<li><a href="">Google Closure compiler</a> - JavaScript minifier</li>
+<li><a href="http://javascriptmvc.com/docs.html#!stealjs">StealJS</a> - JavaScript and dynamic asset loader and build environment</li>
+<li><a href="http://requirejs.org/">RequireJS</a> - JavaScript file and module loader (AMD)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Communication</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2><strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</h2></header>
+            
+            
+            <section><p><strong>JSON</strong>: A text based data exchange format</p>
+<ul>
+<li>Subset of JavaScript</li>
+<li>Supported types<ul>
+<li>Primitives (String, Number, Boolean, <em>null</em>)</li>
+<li>Arrays</li>
+<li>Objects</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">&quot;username&quot;</span> <span class="o">:</span> <span class="s2">&quot;User 1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;emails&quot;</span> <span class="o">:</span> <span class="p">[</span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span> <span class="s2">&quot;other@mail.com&quot;</span><span class="p">]</span>
+    <span class="s2">&quot;address&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;street&quot;</span> <span class="o">:</span> <span class="s2">&quot;Example street&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span> <span class="o">:</span> <span class="s2">&quot;Calgary&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;age&quot;</span> <span class="o">:</span> <span class="mi">42</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2><strong>A</strong>synchronous <strong>Ja</strong>vaScript and <strong>X</strong>ML</h2></header>
+            
+            
+            <section><p><strong>AJAX</strong>: Issue HTTP requests outside of the normal browser request/response cycle using JavaScript.</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#content&#39;</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;ajax/test.html&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Content loaded.&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<p><strong>Loading JSON</strong></p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://example.com/user.json&#39;</span><span class="p">,</span>
+    <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2><strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</h2></header>
+            
+            
+            <section><p><strong>REST</strong>: A resource oriented software architecture style for distributed systems</p>
+<p><strong>URI</strong>: A unique identifier for a resource (e.g. http://example.com/user/1, tel:911)</p>
+<ul>
+<li>Client-Server</li>
+<li>Stateless</li>
+<li>Caching</li>
+<li>Well defined operations</li>
+<li>Layered architecture</li>
+</ul>
+<p>In HTTP:</p>
+<ul>
+<li><strong>GET</strong> - Request a representation of a resource</li>
+<li><strong>POST</strong> - Update a resource</li>
+<li><strong>PUT</strong> - Create a new resource</li>
+<li><strong>DELETE</strong> - Delete a resource</li>
+<li><strong>HEAD</strong> - Like GET but without payload</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>REST - PUT</h2></header>
+            
+            
+            <section><p><strong>Request</strong></p>
+<pre><code>PUT /users HTTP/1.1
+Host: example.com
+Content-Type: text/xml
+Content-Length: 77
+Accept: application/xml,application/json
+Accept-Charset: ISO-8859-1,utf-8
+
+&lt;user&gt;
+        &lt;username&gt;UserX&lt;/username&gt;
+        &lt;password&gt;supersecret&lt;/password&gt;
+&lt;/user&gt;
+</code></pre>
+<p><strong>Response</strong></p>
+<pre><code>HTTP/1.1 201 Created
+Date: Fri, 26 Feb 2010 11:39:07 GMT
+Server: Awesome NodeJS server
+Content-Location: http://example.com/users/2
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>REST- GET</h2></header>
+            
+            
+            <section><p><strong>Request</strong></p>
+<pre><code>GET /users/2 HTTP/1.1
+Host: example.com
+Accept: application/json
+Accept-Charset: utf-8,ISO-8859-1
+</code></pre>
+<p><strong>Response</strong></p>
+<pre><code>HTTP/1.1 200 OK
+Date: Fri, 26 Feb 2010 13:14:07 GMT
+Server: Awesome NodeJS server
+Content-Type: application/json; charset=utf-8
+Content-Length: 55
+
+{
+    "username" : "UserX",
+    "password" : "supersecret"
+}
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Single page applications</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>A different way to interact</h2></header>
+            
+            
+            <section><p><img alt="Thin server architecture" src="images/tsa_overview.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>BackboneJS</h2></header>
+            
+            
+            <section><p>A client side MVC style framework to structure JavaScript applications.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">Photo</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+
+    <span class="c1">// Default attributes for the photo</span>
+    <span class="nx">defaults</span><span class="o">:</span> <span class="p">{</span>
+      <span class="c1">// Ensure that each photo created has an `src`.</span>
+      <span class="nx">src</span><span class="o">:</span> <span class="s2">&quot;placeholder.jpg&quot;</span><span class="p">,</span>
+      <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;A default image&quot;</span><span class="p">,</span>
+      <span class="nx">viewed</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+
+    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>BackboneJS - Photo gallery</h2></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">PhotoGallery</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+
+    <span class="c1">// Reference to this collection&#39;s model.</span>
+    <span class="nx">model</span><span class="o">:</span> <span class="nx">Photo</span><span class="p">,</span>
+
+    <span class="c1">// Filter down the list of all photos that have been viewed</span>
+    <span class="nx">viewed</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">photo</span><span class="p">){</span> <span class="k">return</span> <span class="nx">photo</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;viewed&#39;</span><span class="p">);</span> <span class="p">});</span>
+    <span class="p">},</span>
+
+    <span class="c1">// Filter down the list to only photos that have not yet been viewed</span>
+    <span class="nx">unviewed</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">without</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">viewed</span><span class="p">());</span>
+    <span class="p">}</span>
+
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>CanJS</h2></header>
+            
+            
+            <section><p>Client side MVC framework for building rich web applications. Supports <em>jQuery</em>, <em>Zepto</em>, <em>Mootools</em>,
+<em>Dojo</em>, <em>YUI</em>.</p>
+<ul>
+<li><strong>can.Construct</strong> - inheritable constructor functions</li>
+<li><strong>can.Observe</strong> - observable objects</li>
+<li><strong>can.Model</strong> - observes connected to a RESTful JSON interface</li>
+<li><strong>can.view</strong> - template loading, caching, rendering</li>
+<li><strong>can.EJS</strong> - live binding templates</li>
+<li><strong>can.Control</strong> - declarative event bindings</li>
+<li><strong>can.route</strong> - back button and bookmarking support</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>CanJS - Example</h2></header>
+            
+            
+            <section><p><strong>A view</strong></p>
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/ejs&quot;</span> <span class="na">id=</span><span class="s">&quot;todos&quot;</span><span class="nt">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+    <span class="o">&lt;%</span> <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;%=</span> <span class="k">this</span><span class="p">[</span> <span class="nx">i</span> <span class="p">].</span><span class="nx">name</span> <span class="o">%&gt;&lt;</span><span class="err">/li&gt;</span>
+    <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span>
+    <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<p><strong>Controls and Models</strong></p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">Todo</span> <span class="o">=</span> <span class="nx">can</span><span class="p">.</span><span class="nx">Model</span><span class="p">({</span>
+  <span class="nx">findAll</span> <span class="o">:</span> <span class="s1">&#39;GET /todos&#39;</span><span class="p">,</span>
+  <span class="nx">findOne</span> <span class="o">:</span> <span class="s1">&#39;GET /todos/{id}&#39;</span><span class="p">,</span>
+  <span class="nx">create</span>  <span class="o">:</span> <span class="s1">&#39;POST /todos&#39;</span><span class="p">,</span>
+  <span class="nx">update</span>  <span class="o">:</span> <span class="s1">&#39;PUT /todos/{id}&#39;</span><span class="p">,</span>
+  <span class="nx">destroy</span> <span class="o">:</span> <span class="s1">&#39;DELETE /todos/{id}&#39;</span>
+<span class="p">},</span> <span class="p">{});</span>
+
+<span class="kd">var</span> <span class="nx">Control</span> <span class="o">=</span> <span class="nx">can</span><span class="p">.</span><span class="nx">Control</span><span class="p">({</span>
+    <span class="s1">&#39;button click&#39;</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">findElementById</span><span class="p">(</span><span class="s1">&#39;mydiv&#39;</span><span class="p">).</span><span class="nx">innerHtml</span> <span class="o">=</span>
+            <span class="nx">can</span><span class="p">.</span><span class="nx">view</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">,</span> <span class="nx">Todo</span><span class="p">.</span><span class="nx">findAll</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Mobile</h1></header>
+            
+            
+            <section><p><a href="http://phonegap.com/">Phonegap</a>: A cross platform (iOS, Android, Blackberry, WebOS, Symbian) framework
+to run single page applications providing access to mobile phone functionality.</p>
+<div class="highlight"><pre><span class="nx">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myImage&#39;</span><span class="p">);</span>
+    <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&quot;data:image/jpeg;base64,&quot;</span> <span class="o">+</span> <span class="nx">imageData</span><span class="p">;</span>
+<span class="p">},</span> <span class="kc">null</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">quality</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="nx">destinationType</span><span class="o">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">DATA_URL</span>
+<span class="p">});</span>
+</pre></div>
+
+<p><strong>Mobile development frameworks</strong></p>
+<ul>
+<li><a href="http://www.sencha.com/products/touch">SenchaTouch</a></li>
+<li><a href="http://jquerymobile.com/">jQuery Mobile</a></li>
+<li><a href="http://dojotoolkit.org/features/mobile">Dojo mobile</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Testing</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Client side testing</h2></header>
+            
+            
+            <section><p>Client side testing is still not a common practise</p>
+<p><strong>Unit tests</strong></p>
+<p>Test if separate contained parts (e.g. a module) return expected values,
+injecting mock dependencies if necessary.</p>
+<p><strong>Functional tests</strong></p>
+<p>Test if user interaction works as expected</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              30/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>Jasmine</h2></header>
+            
+            
+            <section><p>A behaviour driven development (BDD) framework to test JavaScript code:</p>
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">sayHi</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getAnswer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">42</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;A test suite&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Should say hi to David&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">(</span><span class="s1">&#39;David&#39;</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="s1">&#39;Hi David&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">Should</span> <span class="k">return</span> <span class="nx">the</span> <span class="nx">answer</span> <span class="nx">to</span> <span class="nx">all</span> <span class="nx">questions</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expecte</span><span class="p">(</span><span class="nx">getAnswer</span><span class="p">()).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>QUnit</h2></header>
+            
+            
+            <section><p>Originally part of jQuery but evolved into a separate unit testing suite:</p>
+<div class="highlight"><pre><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;Hi Sayer&#39;</span><span class="p">);</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Saying hi&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">actual</span> <span class="o">=</span> <span class="nx">sayHi</span><span class="p">(</span><span class="s1">&#39;David&#39;</span><span class="p">);</span>
+    <span class="nx">equals</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="s1">&#39;Hi David&#39;</span><span class="p">,</span> <span class="s1">&#39;Said Hi&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Returns the answer to all questions&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">equals</span><span class="p">(</span><span class="nx">answer</span><span class="p">(),</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;Got the answer to all questions&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              32/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>FuncUnit</h2></header>
+            
+            
+            <section><p>A functional testing suite to simulate user input based on QUnit and jQuery:</p>
+<div class="highlight"><pre><span class="nx">module</span><span class="p">(</span><span class="s2">&quot;jQuery Demo tester&quot;</span><span class="p">,{</span>
+    <span class="nx">setup</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">S</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;demo.html&#39;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;Plugin says hi&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// Type some text into &lt;input name=&quot;your-name&quot; /&gt;</span>
+    <span class="nx">S</span><span class="p">(</span><span class="s1">&#39;input[name=&quot;your-name&quot;]&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">().</span><span class="nx">type</span><span class="p">(</span><span class="s2">&quot;David&quot;</span><span class="p">)</span>
+    <span class="c1">// Click the button</span>
+    <span class="nx">S</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+    <span class="c1">// Check the HTML content</span>
+    <span class="nx">S</span><span class="p">(</span><span class="s1">&#39;#mydiv&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Hi David&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              33/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Documentation</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="cm">/**</span>
+<span class="cm"> * A Person class.</span>
+<span class="cm"> * @param name The name of the person</span>
+<span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Says hi.</span>
+<span class="cm"> * @return {String} A string saying hi</span>
+<span class="cm"> */</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayHi</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              34/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>DocumentJS</h2></header>
+            
+            
+            <section><p>Documentation generator for JSDoc style comments:</p>
+<div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm"> * @page index CRM</span>
+<span class="cm"> * @tag home</span>
+<span class="cm"> *</span>
+<span class="cm"> * ## Little CRM</span>
+<span class="cm"> *</span>
+<span class="cm"> * Our little CRM only has two classes:</span>
+<span class="cm"> *</span>
+<span class="cm"> * * Customer</span>
+<span class="cm"> * * Order</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @parent index</span>
+<span class="cm"> * A function that says hi</span>
+<span class="cm"> * @param {String} name The name to say hi to</span>
+<span class="cm"> * @return {String} The saying hi string</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">sayHi</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>Docco</h2></header>
+            
+            
+            <section><p>A quick-and-dirty, hundred-line-long, literate-programming-style documentation generator.</p>
+<p>Originally for Coffeescript but works with JavaScript as well.</p>
+<div class="highlight"><pre><span class="c1">// # Saying hi</span>
+<span class="c1">// This is my litte program that says hi.</span>
+
+<span class="c1">// A function that says hi</span>
+<span class="c1">// name - The name to say hi to</span>
+<span class="kd">function</span> <span class="nx">sayHi</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;Hi &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Thank you</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              37/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Frontend JavaScript</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">JavaScript in the browser</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">JavaScript libraries</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-4" class="sub">
+          <th><a href="#slide4">Purpose</a></th>
+          <td><a href="#slide4">4</a></td>
+        </tr>
+        
+        <tr id="toc-row-5" class="sub">
+          <th><a href="#slide5">ExtJS</a></th>
+          <td><a href="#slide5">5</a></td>
+        </tr>
+        
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">jQuery</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">jQuery - Example</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Application Organization</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">Scope in JavaScript</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">Namespacing</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Modules</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">A jQuery plugin</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
+        <tr id="toc-row-13" class="sub">
+          <th><a href="#slide13"><strong>A</strong>synchronous <strong>m</strong>odule <strong>d</strong>efinition</a></th>
+          <td><a href="#slide13">13</a></td>
+        </tr>
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">Environments</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
+        <tr id="toc-row-15" class="sub">
+          <th><a href="#slide15">Tools</a></th>
+          <td><a href="#slide15">15</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Communication</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-17" class="sub">
+          <th><a href="#slide17"><strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</a></th>
+          <td><a href="#slide17">17</a></td>
+        </tr>
+        
+        <tr id="toc-row-18" class="sub">
+          <th><a href="#slide18"><strong>A</strong>synchronous <strong>Ja</strong>vaScript and <strong>X</strong>ML</a></th>
+          <td><a href="#slide18">18</a></td>
+        </tr>
+        
+        <tr id="toc-row-19" class="sub">
+          <th><a href="#slide19"><strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</a></th>
+          <td><a href="#slide19">19</a></td>
+        </tr>
+        
+        <tr id="toc-row-20" class="sub">
+          <th><a href="#slide20">REST - PUT</a></th>
+          <td><a href="#slide20">20</a></td>
+        </tr>
+        
+        <tr id="toc-row-21" class="sub">
+          <th><a href="#slide21">REST- GET</a></th>
+          <td><a href="#slide21">21</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">Single page applications</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-23" class="sub">
+          <th><a href="#slide23">A different way to interact</a></th>
+          <td><a href="#slide23">23</a></td>
+        </tr>
+        
+        <tr id="toc-row-24" class="sub">
+          <th><a href="#slide24">BackboneJS</a></th>
+          <td><a href="#slide24">24</a></td>
+        </tr>
+        
+        <tr id="toc-row-25" class="sub">
+          <th><a href="#slide25">BackboneJS - Photo gallery</a></th>
+          <td><a href="#slide25">25</a></td>
+        </tr>
+        
+        <tr id="toc-row-26" class="sub">
+          <th><a href="#slide26">CanJS</a></th>
+          <td><a href="#slide26">26</a></td>
+        </tr>
+        
+        <tr id="toc-row-27" class="sub">
+          <th><a href="#slide27">CanJS - Example</a></th>
+          <td><a href="#slide27">27</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide28">Mobile</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide29">Testing</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-30" class="sub">
+          <th><a href="#slide30">Client side testing</a></th>
+          <td><a href="#slide30">30</a></td>
+        </tr>
+        
+        <tr id="toc-row-31" class="sub">
+          <th><a href="#slide31">Jasmine</a></th>
+          <td><a href="#slide31">31</a></td>
+        </tr>
+        
+        <tr id="toc-row-32" class="sub">
+          <th><a href="#slide32">QUnit</a></th>
+          <td><a href="#slide32">32</a></td>
+        </tr>
+        
+        <tr id="toc-row-33" class="sub">
+          <th><a href="#slide33">FuncUnit</a></th>
+          <td><a href="#slide33">33</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-34">
+        <th><a href="#slide34">Documentation</a></th>
+        <td><a href="#slide34">34</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-35" class="sub">
+          <th><a href="#slide35">DocumentJS</a></th>
+          <td><a href="#slide35">35</a></td>
+        </tr>
+        
+        <tr id="toc-row-36" class="sub">
+          <th><a href="#slide36">Docco</a></th>
+          <td><a href="#slide36">36</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-37">
+        <th><a href="#slide37">Thank you</a></th>
+        <td><a href="#slide37">37</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
