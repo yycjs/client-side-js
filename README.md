@@ -1,4 +1,4 @@
-Bootcamp3
+Bootcamp3 - Client Side JS Overview
 =========
 
 Resources For Bootcamp #3
