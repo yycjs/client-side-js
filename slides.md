@@ -1,16 +1,18 @@
 # Frontend JavaScript
 
-<h2 class="frontpage">David Luecke</h2>
+---
 
-<span class="frontpage">GitHub:</span>
-<a class="frontpage" href="http://daffl.github.com">daffl.github.com</a>
+## By... 
 
-<span class="frontpage">Twitter:</span>
-<a class="frontpage" href="http://twitter.com/daffl">@daffl</a>
+## David Luecke
+
+## GitHub: [daffl.github.com](http://daffl.github.com)
+
+## Twitter: [@daffl](http://twitter.com/daffl)
 
 ---
 
-# JavaScript in the browser
+## JavaScript in the browser
 
 ![Overview](images/overview.png)
 
@@ -155,7 +157,7 @@ __Global variables__
 
 ---
 
-## A jQuery plugin
+## A jQuery Plugin
 
 	!javascript
 	(function($) {
@@ -178,7 +180,7 @@ __Global variables__
 
 ---
 
-## __A__synchronous __m__odule __d__efinition
+## __A__synchronous __M__odule __D__efinition
 
 __AMD__: [CommonJS](http://www.commonjs.org/) specification for
 [asynchronously loading dependencies](https://github.com/amdjs/amdjs-api/wiki/AMD).
@@ -266,7 +268,7 @@ __Example__
 
 ---
 
-## __A__synchronous __Ja__vaScript and __X__ML
+## __A__synchronous __Ja__vaScript & __X__ML
 
 __AJAX__: Issue HTTP requests outside of the normal browser request/response cycle using JavaScript.
 
@@ -310,31 +312,6 @@ In HTTP:
 
 ---
 
-## REST - PUT
-
-__Request__
-
-	PUT /users HTTP/1.1
-	Host: example.com
-	Content-Type: text/xml
-	Content-Length: 77
-	Accept: application/xml,application/json
-	Accept-Charset: ISO-8859-1,utf-8
-
-	<user>
-	        <username>UserX</username>
-	        <password>supersecret</password>
-	</user>
-
-__Response__
-
-	HTTP/1.1 201 Created
-	Date: Fri, 26 Feb 2010 11:39:07 GMT
-	Server: Awesome NodeJS server
-	Content-Location: http://example.com/users/2
-
----
-
 ## REST- GET
 
 __Request__
@@ -358,6 +335,32 @@ __Response__
     }
 
 ---
+
+## REST - POST
+
+__Request__
+
+	POST /users HTTP/1.1
+	Host: example.com
+	Content-Type: text/xml
+	Content-Length: 77
+	Accept: application/xml,application/json
+	Accept-Charset: ISO-8859-1,utf-8
+
+	<user>
+	        <username>UserX</username>
+	        <password>supersecret</password>
+	</user>
+
+__Response__
+
+	HTTP/1.1 201 Created
+	Date: Fri, 26 Feb 2010 11:39:07 GMT
+	Server: Awesome NodeJS server
+	Content-Location: http://example.com/users/2
+
+---
+
 
 # Single page applications
 
@@ -461,7 +464,7 @@ __Controls and Models__
 
 ---
 
-# Mobile
+## Mobile
 
 [Phonegap](http://phonegap.com/): A cross platform (iOS, Android, Blackberry, WebOS, Symbian) framework
 to run single page applications providing access to mobile phone functionality.
@@ -569,7 +572,7 @@ A functional testing suite to simulate user input based on QUnit and jQuery:
 
 ---
 
-# Documentation
+## Documentation
 
 	!javascript
 	/**
