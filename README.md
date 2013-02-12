@@ -1,8 +1,3 @@
-Bootcamp3 - Client Side JS Overview
-=========
+# A Noobs Guide to Client Side JS
 
-Resources For Bootcamp #3
-
-### How to View ###
-
-You can either look at the slides in markdown format `slides.md` or simply open `presentation.html` in any web browser. Simple.
+We will be walking through the basics of JavaScript, what tools are available for client side development and pretty much everything else you would need to know in an intro course. The slides are located right [here](http://yycjs.com/framework-shootout) and the examples can be found [here](https://github.com/yycjs/framework-shootout/tree/gh-pages/examples).
